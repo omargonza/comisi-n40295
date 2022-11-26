@@ -4,14 +4,6 @@
   
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -19,15 +11,18 @@ code {
 }
 
 .caja{
-  
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
+  max-width: 1550px;
+  width: 100%;
+  
 
 
 }
 
 .btn{
-  height: 100%;
+
   background-color: aqua;
   border: none;
   color: aliceblue;
