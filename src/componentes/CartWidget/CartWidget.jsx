@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-export default function CartWitch() {
+export default function CartWidget() {
     return (
         <div className='carrito'>
             <box-icon name="BsCart4 " ></box-icon>
