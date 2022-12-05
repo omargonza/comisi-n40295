@@ -35,7 +35,11 @@ code {
   font-size: 25px;
   font: bold;
 }
-
+.CartWidget{
+  display: flex;
+  justify-content: flex-end;
+  background-color: red;
+}
 
 /*
 box-icon{

@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import  'boxicons';
+import CartWidget from './CartWidget/CartWidget';
 
 
 
@@ -38,9 +39,7 @@ export default function NavBar() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-          
-            <box-icon name='cart-download'></box-icon>
-            <span className='item_total'>1</span>
+          <CartWidget/>
           </Nav>
          
     
