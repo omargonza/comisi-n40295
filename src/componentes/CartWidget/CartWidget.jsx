@@ -1,11 +1,12 @@
 import React from 'react'
-import  'boxicons';
+import "boxicons";
 
 
 export default function CartWidget() {
-    return (
-        <>
-            <box-icon name='cart-download' ></box-icon>
-            <span className='item_total'>1</span> </>
+    return ( 
+        
+        <div className='Cart'>
+            <box-icon name="cart"> </box-icon>
+            <span className='item_total'>1</span> </div>
     )
 }

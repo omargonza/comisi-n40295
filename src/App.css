@@ -1,5 +1,12 @@
  .App {
+  max-width: 1550;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-sizing:border-box ;
   text-align: center;
+  box-shadow: 0 2px 6px #08a05ca4;
+  ;
 }
 
 .App-logo {

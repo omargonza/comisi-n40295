@@ -3,7 +3,15 @@
   padding: 0;
   }
 
-
+  .App {
+    max-width: 1550;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-sizing:border-box ;
+    text-align: center;
+    box-shadow: 0 2px 6px #08a05ca4;
+  }
 /*
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -11,24 +19,13 @@ code {
 }*/
 
 .nabvar{
-  height: 40px;
-}
-.caja{
-  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  
-  width: 98%;
-  
-
-
+  height: 50px;
 }
 
+/*
 .btn{
- width: 500px;
- height: 200px;
+ width: 120px;
+ height: 50px;
   background-color: rgb(255, 0, 115);
   border: none;
   color: aliceblue;
@@ -39,14 +36,42 @@ code {
   display: flex;
   justify-content: flex-end;
   background-color: red;
+}*/
+.carro{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.Cart{
+
+  display: flex;
+  justify-content: flex-end;
+  
 }
 
-/*
-box-icon{
-  font-size: 128px;
-  color: aqua;
+.Cart box-icon{
+ 
+  width: 35px;
+  height: 35px;
+
 }
-*/
+   .Cart span .item_total{
+
+  top: -1rem;
+  right: -1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: crimson;
+}
 .contenedor{
   display: flex;
 
@@ -55,15 +80,18 @@ box-icon{
   
   position: relative;
   margin: 10px 15px;
-  min-height: 500px;
-  width: 300px;
-  height: 100px;
+  min-height: 520px;
+  padding-left: 20px;
+  width: 280px;
+  height: 100%;
   border-radius: 5px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+  box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.50);
   background-color: #fff;
   overflow: hidden;
   transition: all 0.20s ease-in;
   cursor: pointer;
+  text-decoration: none;
+  font-style:oblique;
 
 }
 
@@ -82,4 +110,5 @@ box-icon{
 .card:hover{
   box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.25);
   transform: translateY(-6px);
+  
 }

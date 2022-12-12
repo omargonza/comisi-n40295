@@ -6,8 +6,9 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import  'boxicons';
-import CartWidget from './CartWidget/CartWidget';
+import {BsFillCartCheckFill } from "react-icons/bi";
+import CartWidget from '../CartWidget/CartWidget';
+
 
 
 
@@ -25,21 +26,25 @@ export default function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href=  "/">Home</Nav.Link>
             
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
+            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+              <NavDropdown.Item href=  "/" >Home</NavDropdown.Item>
+              <NavDropdown.Item href=  "/category/Remeras" >Remeras ambos sexos</NavDropdown.Item>
+              <NavDropdown.Item href="/category/Calzados" >
+                Calzados
               </NavDropdown.Item>
               <NavDropdown.Divider />
            
           
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="/category/Pantalones">
+                Pantalones ambos sexos
               </NavDropdown.Item>
             </NavDropdown>
-          <CartWidget/>
+            <div className='carro'>
+         <CartWidget />
+         </div>
+          
           </Nav>
          
     
