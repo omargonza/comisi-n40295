@@ -1,14 +1,10 @@
 import React from 'react'
-
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {BsFillCartCheckFill } from "react-icons/bi";
 import CartWidget from '../CartWidget/CartWidget';
-
+import {Link} from "react-router-dom";
 
 
 
@@ -26,20 +22,16 @@ export default function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href=  "/">Home</Nav.Link>
+            <Nav.Link as={Link}to="/">Home</Nav.Link>
             
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href=  "/" >Home</NavDropdown.Item>
-              <NavDropdown.Item href=  "/category/Remeras" >Remeras ambos sexos</NavDropdown.Item>
-              <NavDropdown.Item href="/category/Calzados" >
-                Calzados
-              </NavDropdown.Item>
+              
+              <NavDropdown.Item as= {Link}to="/category/Remeras" >Remeras ambos sexos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/Calzados">Calzados</NavDropdown.Item>
               <NavDropdown.Divider />
            
           
-              <NavDropdown.Item href="/category/Pantalones">
-                Pantalones ambos sexos
-              </NavDropdown.Item>
+              <NavDropdown.Item as={Link}to="/category/Pantalones">Pantalones ambos sexos</NavDropdown.Item>
             </NavDropdown>
             <div className='carro'>
          <CartWidget />
