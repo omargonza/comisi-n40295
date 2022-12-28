@@ -7,6 +7,8 @@ function Flex(props) {
     justifyContent: "space-evenly",
     flexWrap: "wrap",
     alignItems: "center",
+    
+    
   };
 
   return <div style={styleFlex}>{props.children}</div>;

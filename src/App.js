@@ -1,46 +1,38 @@
-import React from 'react';
-import './App.css';
+import "./App.css";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contacto from "./Page/Contactos";
+import NavBar from "./componentes/NavBar/NavBar";
+import { CartContextProvider } from "./storage/cartContext";
+import CartContainer from "./componentes/CartContainer/CartContainer";
+import { getItems } from "./service/firebase";
 
-import NavBar from './componentes/NavBar/NavBar.jsx';
 
 
 
 
 
 function App() {
+  getItems();
   return (
-   < >
-<BrowserRouter>
-<NavBar/>
-<Routes>
-<Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:categoryID" element={<ItemListContainer />} />
-        <Route path="/item/:itemID" element={<ItemDetailContainer />} />
+    <CartContextProvider>
+      <BrowserRouter>
+        <NavBar
+          onNavigate={(ruta) => console.log("Estas navegando a la ruta", ruta)}
+        />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryID" element={<ItemListContainer />} />
+          <Route path="/item/:itemID" element={<ItemDetailContainer />} />
+          <Route path="./Page/contactos" element={<Contacto />} />
 
-       
-        <Route path="*" element={<h1>404: Recurso no encontrado</h1>} />
-{/*
-<Item onClick={console.log}
-price={5000}
-title="Taladro electrico"
-description="Con función reversa.
-Cuenta con función destornillador.
-Incluye función percutor.
-Velocidad máxima de rotación: 1650rpm.
-Posee control de torque.
-Tiene luz led.
-"
-imgUrl="https://http2.mlstatic.com/D_NQ_NP_902951-MLA47752673434_102021-O.webp"
-></Item>*/}
+          <Route path="/cart" element={<CartContainer />} />
 
-</Routes>
-</BrowserRouter>
-
-
-   </>
+          <Route path="*" element={<h1>404: Recurso no encontrado</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 

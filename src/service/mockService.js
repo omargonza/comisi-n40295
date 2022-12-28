@@ -1,6 +1,6 @@
 /* -------------- BACK-END -------------- */
 import products from "../data/products";
-
+/*
 function getItems() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -34,4 +34,4 @@ export function getSingleItem(itemID) {
   });
 }
 
-export default getItems;
+export default getItems;*/

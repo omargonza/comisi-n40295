@@ -2,11 +2,12 @@ const products = [
     {
       id: 1,
       category:"Calzados",
-      stock: 2,
+      stock: 5,
       title: "Zapatillas Urbano ",
       price: 20000,
       img:"https://http2.mlstatic.com/D_NQ_NP_616451-MLA50187978324_062022-O.webp  ",
       description: "Zapatillas para hombre color blanco",
+      discount: 50,
     },
     {
       id: 2,
@@ -61,34 +62,39 @@ const products = [
       stock: 68,
       category: "Pantalones",
       img: "https://http2.mlstatic.com/D_NQ_NP_834381-MLA52525603263_112022-W.webp  ",
+      discount: 30,
+
     },
     {
       id: 9,
       title:"Rusty Sensei",
       description:"Pantalon Rusty hombre",
       price: 11999,
-      stock: 96,
+      stock: 2,
       category: "Pantalones",
       img:"https://http2.mlstatic.com/D_NQ_NP_686327-MLA52416261369_112022-W.webp",
+      discount: 25,
     },
     {
       id: 10,
-      title: "Fila sugar gris",
+      title: "Fila Sugar ",
       description:
         "Pantalon gris mujer",
       price: 13999,
-      stock: 89,
+      stock: 1,
       category: "Pantalones",
       img:"https://http2.mlstatic.com/D_NQ_NP_755608-MLA52747703574_122022-W.webp",
+      discount:25,
     },
     {
       id: 11,
       title: "Liso deportivo babucha",
       description:"Pantalon hombre friza",
       price: 13000,
-      stock: 65,
+      stock: 6,
       category: "Pantalones",
       img: "  https://http2.mlstatic.com/D_NQ_NP_772829-MLA41759047785_052020-W.webp",
+      discount:30
     },
     {
       id: 12,
@@ -101,7 +107,7 @@ const products = [
     },
     {
       id: 13,
-      title: "Remeras para embarazadas",
+      title: "Remeras Futura Mamá",
       description:
         " Remera para embarazdas talles grandes",
       price: 4500,
@@ -114,10 +120,11 @@ const products = [
       title: "Sudadera GyM Mujer",
       description:
         "Remeras musculosas deportiva",
-      price: 3200,
-      stock: 114,
+      price: 3500,
+      stock: 10,
       category: "Remeras",
       img: " https://http2.mlstatic.com/D_NQ_NP_805320-MLA52579006752_112022-W.webp",
+      discount:10,
     },
    
   ];

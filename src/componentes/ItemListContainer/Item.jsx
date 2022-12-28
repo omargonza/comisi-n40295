@@ -1,29 +1,38 @@
-import React from 'react'
-import {Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import ToggleButton from "../ToggleButton/ToggleButton";
+import "./Item.css";
+import { Link } from "react-router-dom";
+
 function Item(props) {
+  let urlDetail = `/item/${props.id}`;
 
-const{ imgUrl,title,price,description}=props
-let urlDetail = `/item/${props.id}`;
+  /* let stylePrice = {
+    color: props.discount ? "green" : "black",
+  }; */
 
+  let classNamePrice = `item-price ${props.discount && "offerTag"}`;
+  let classNameItem = `card ${props.newProduct ? "item-new" : ""}`;
 
   return (
-     <Link to={urlDetail}>
-    <Card style={{ width: '20rem' }}>
-      <Card.Img variant="top" src= {props.img} alt="imagen del producto" />
-      <Card.Body>
-        <Card.Title> {props.Title } </Card.Title>
-        <Card.Text>
-          {props.description}
-        </Card.Text>
-        <Button variant="secondary" size="lg">
-        Ir al Detalle
-      </Button>
-      </Card.Body>
-    </Card>
+    <Link to={urlDetail}>
+      <div className={classNameItem}>
+        <ToggleButton icon="♥" />
+        <div className="card-img">
+          <img src={props.img} alt="imagen producto"></img>
+        </div>
+        <div className="card-detail">
+          <h2>{props.title}</h2>
+          <h4 className={classNamePrice}>
+            $ {props.price}
+            {/* { props.discount? <small>{props.discount}% off</small> : <></> } */}
+            <br />
+            {props.discount && <small>{props.discount}% off</small>}
+          </h4>
+          <small>{props.description}</small>
+        </div>
+      </div>
     </Link>
-  )
+  );
 }
 
-export default Item  
+export default Item;
