@@ -12,12 +12,12 @@
     text-align: center;
     box-shadow: 0 2px 6px #08a05ca4;
   }
-/*
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}*/
-
+}
+/*
 .nabvar{
   height: 50px;
 }
@@ -36,7 +36,7 @@ code {
   display: flex;
   justify-content: flex-end;
   background-color: red;
-}*/
+}
 .carro{
   display: flex;
   flex-direction: column;
@@ -112,3 +112,14 @@ code {
   transform: translateY(-6px);
   
 }
+.carrito_close{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: all 300ms ease-in-out;
+  margin: 3rem 0 0 2rem;
+
+
+}
+*/

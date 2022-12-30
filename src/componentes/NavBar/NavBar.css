@@ -2,24 +2,40 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 97%;
+    min-width: 1530px;
+    overflow: hidden;
     margin: 0;  
     height: 90px;
-    background-color: rgb(77, 74, 74);
-    top: 0;
-    margin-bottom: 45px;
+    flex-wrap: wrap;
+    position: fixed;
+    box-sizing: border-box;
+    background-color: rgb(171, 154, 154);
+    box-shadow: 0 5px 10px #808080;
+    
+    
     
   }
-  
-  a{
-    text-decoration: none;
-    font-weight:400;
-    font-size: 1.15em;
-    color:rgb(59, 59, 50)
+  .cart{
+
+   position: relative;
+  cursor: pointer;
   }
+     
+  span{
+    position: absolute;
+    top: -0.7rem;
+    right: -1.6rem;
+    width: 2rem;
+    height: 2rem;
   
-  
-  a:hover{
-    font-weight: 600;
-    color:rgb(19, 19, 17)
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: crimson;
   }
