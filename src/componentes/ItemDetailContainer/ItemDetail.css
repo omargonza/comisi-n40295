@@ -58,12 +58,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 855px;
     box-shadow:1px 10px 10px 2px rgba (0,0,0, .2) ;
     border: 6px solid transparent;
+    border-radius: 5px;
 }
 
 .producto:hover{
-    border: 6px solid #08a05c55;
+    border: 3px solid #a0081255;
 }
 
 .producto_img img {
@@ -100,4 +102,19 @@ font-family:  Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap:1rem 2rem;
+    
+}
+.buttom {
+    border: none;
+    outline: 0;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.buttom .button{
+    background-color:  #a0081255;
+    max-width: 250px;
+    width: 100%;
+    
+
 }

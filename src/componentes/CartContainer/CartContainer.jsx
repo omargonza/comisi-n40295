@@ -29,9 +29,9 @@ function CartContainer() {
 export default CartContainer;
 */
 function CartContainer() {
-  const { cart, removeItem } = useContext(cartContext);
 
-
+  const {cart,removeItem,clear,totalPrice} = useContext (cartContext);
+ 
   return (
 <>
 <div className="carritos show">
@@ -49,7 +49,7 @@ function CartContainer() {
         <div>
           <h3>  {item.title}</h3>
           <p className="price">$ {item.price} </p>
-          <h4>total: ${}</h4>
+          <h4>Precio Total ${totalPrice(cart)}  </h4>
         </div>
       </div>
       <box-icon className="up-arrow" type="solid"></box-icon>
@@ -58,8 +58,9 @@ function CartContainer() {
       <box-icon name="down-arrow" type="solid"></box-icon>
     </div>
     <div className="remove_item">
-      <box-icon name="trash"></box-icon>
-    </div>
+      
+      <button onClick={() => {removeItem(item)}} className="invisible-button"><box-icon name="trash">    </box-icon></button> 
+    </div> 
     </>
       ))}
 
@@ -69,5 +70,6 @@ function CartContainer() {
 </>
   );
 }
+
 
 export default CartContainer;

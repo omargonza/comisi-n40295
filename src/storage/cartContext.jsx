@@ -11,7 +11,7 @@ const Provider = cartContext.Provider;
 function CartContextProvider(props){
     //3. Creamos un estado
     const [cart, setCart] = useState([]);
-
+  
     let saludo = "hola desde context"
 
     function addToCart(item,count){
@@ -42,9 +42,19 @@ function CartContextProvider(props){
 
     // function removeItem(id) -> filter 
 
+    const removeItem = (item) => { 
+        let updatedCart = cart.filter( it => !(it.id === item.id) )
+        setCart(updatedCart);
+    };
+
     // function emptyCart() -> []
 
+    let clear = () => { setCart([]) };
+
     // totalPriceInCart() -> $$
+    let totalPrice = () => cart.reduce((ac,it) => ac + it.count*it.price,0)
+    console.log (cart)
+    
 
     return(
         <Provider value={ {
@@ -52,7 +62,10 @@ function CartContextProvider(props){
             saludo,
             addToCart,
             totalItemsInCart,
-            totalItemsInCartfn
+            totalItemsInCartfn,
+            removeItem,
+            clear,
+            totalPrice
             }}>
              {props.children}
         </Provider>

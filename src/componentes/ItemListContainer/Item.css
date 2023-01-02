@@ -1,5 +1,5 @@
 .card{
-    position: relative;
+    position: fixed;
     margin: 10px 15px;
     min-height: 520px;
     width: 280px;
@@ -30,6 +30,12 @@
   
   .card-detail{
     padding: 12px 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+ font-family:  Helvetica, sans-serif;
+ text-decoration: none;
+ 
   }
   
   .card:hover .card-favicon{
@@ -54,12 +60,12 @@
   
   .card-favicon.favorite{
     display: block;
-    background-color: rgb(223, 117, 84);
-    color: white;
+    background-color: crimson;
+    color:crimson;
   }
   
   small{
-    color: #8c8c8e;
+    color: #0c0c14;
   }
   
   .priceTag{
@@ -68,8 +74,7 @@
   }
   
   .offerTag{
-    color: #21b276
+    color:  #0c0c14;
+    font-weight: bold;
   }
-  .item-new{
-    border: solid 2px blue;
-  }
+  

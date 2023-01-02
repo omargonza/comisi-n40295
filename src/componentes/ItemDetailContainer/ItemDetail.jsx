@@ -44,7 +44,8 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount/ItemCount";
 import { cartContext } from "../../storage/cartContext";
-import CartWidget from "../NavBar/CartWidget";
+
+
 
 import "./ItemDetail.css";
 function ItemDetail({ product }) {
@@ -59,6 +60,7 @@ function ItemDetail({ product }) {
     //2. ocultar el itemCount . . .
   }
 
+  
   return (
     <>
       <h1 className="Title">PRODUCTO</h1>
@@ -66,7 +68,7 @@ function ItemDetail({ product }) {
         <div className="producto">
           <a href="#">
             <div className="producto_img">
-              <img src={product.imag} alt={product.title} />
+              <img src={product.img} alt={product.title} />
             </div>
           </a>
           <div className="producto_footer">
@@ -77,9 +79,53 @@ function ItemDetail({ product }) {
           <div className="buttom">
             <ItemCount onAddToCart={handleAddToCart} />
             <button onClick={() => removeItem(product.id)}>X</button>
-            <Link to="../NavBar/CartWidget">Ir al carrito</Link>
+            <Link to="../Cart">Ir al carrito</Link>
             <div>
               <a href="#" className="btn">
+                Vista
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="producto">
+          <a href="#">
+            <div className="producto_img">
+              <img src={product.img} alt={product.title} />
+            </div>
+          </a>
+          <div className="producto_footer">
+            <h1>{product.title} </h1>
+            <p> {product.description} </p>
+            <p className="price">${product.price} </p>
+          </div>
+          <div className="buttom">
+            <ItemCount onAddToCart={handleAddToCart} />
+            <button onClick={() => removeItem(product.id)}>X</button>
+            <Link to="../Cart">Ir al carrito</Link>
+            <div>
+              <a href="#" className="btn">
+                Vista
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="producto">
+          <a href="#">
+            <div className="producto_img">
+              <img src={product.img} alt={product.title} />
+            </div>
+          </a>
+          <div className="producto_footer">
+            <h1>{product.title} </h1>
+            <p> {product.description} </p>
+            <p className="price">${product.price} </p>
+          </div>
+          <div className="buttom">
+            <ItemCount onAddToCart={handleAddToCart} />
+            <button onClick={() => removeItem(product.id)}>X</button>
+            <Link to="../Cart">Ir al carrito</Link>
+            <div>
+              <a href={product.img} className="btn">
                 Vista
               </a>
             </div>
@@ -89,5 +135,6 @@ function ItemDetail({ product }) {
     </>
   );
 }
+
 
 export default ItemDetail;

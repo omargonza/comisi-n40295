@@ -26,7 +26,7 @@ function Item(props) {
             $ {props.price}
             {/* { props.discount? <small>{props.discount}% off</small> : <></> } */}
             <br />
-            {props.discount && <small>{props.discount}% off</small>}
+            {props.discount &&  <small>{props.discount}% off</small>}
           </h4>
           <small>{props.description}</small>
         </div>

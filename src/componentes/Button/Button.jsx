@@ -2,12 +2,13 @@ import styles from "./Button.module.css";
 import { useState } from "react";
 
 function Button(props) {
+  
   const [colorButton, setColorButton] = useState(props.color);
 
   const styleBtn = { backgroundColor: colorButton };
 
   function changeColor() {
-    setColorButton("red");
+    setColorButton(props.colorButton);
   }
 
   return (

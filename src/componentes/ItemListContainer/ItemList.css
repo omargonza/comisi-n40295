@@ -1,5 +1,10 @@
 .itemList{  
-    padding: 45px 10px;
-    position: static;
+    padding: 80px 30px;
+   
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+ font-family:  Helvetica, sans-serif;
+ 
     
   }

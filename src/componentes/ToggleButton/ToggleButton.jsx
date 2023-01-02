@@ -7,10 +7,10 @@ function ToggleButton(props) {
     setIsActive(!isActive);
   }
   // npm classname
-  let classNameButton = isActive ? "card-favicon favorite" : "card-favicon";
+  let classNameButton = isActive ?  "card-favicon favorite" : "card-favicon";
 
   return (
-    <button className={classNameButton} onClick={handleClick}>
+    <button className={classNameButton} onClick={handleClick} >
       {props.icon}
     </button>
   );

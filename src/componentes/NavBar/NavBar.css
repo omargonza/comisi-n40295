@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     width: 97%;
+    min-height: 100px;
     min-width: 1530px;
     overflow: hidden;
     margin: 0;  
@@ -12,6 +13,7 @@
     box-sizing: border-box;
     background-color: rgb(171, 154, 154);
     box-shadow: 0 5px 10px #808080;
+    z-index: 1;
     
     
     
