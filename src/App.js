@@ -8,6 +8,7 @@ import { CartContextProvider } from "./storage/cartContext";
 import CartContainer from "./componentes/CartContainer/CartContainer";
 import { getItems } from "./service/firebase";
 import "./index.css";
+import Inicio from "./componentes/inicio/Inicio";
 
 
 
@@ -23,7 +24,7 @@ function App() {
           onNavigate={(ruta) => console.log("Estas navegando a la ruta", ruta)}
         />
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" element={<Inicio />} />
           <Route path="/category/:categoryID" element={<ItemListContainer />} />
           <Route path="/item/:itemID" element={<ItemDetailContainer />} />
           <Route path="./Page/contactos" element={<Contacto />} />

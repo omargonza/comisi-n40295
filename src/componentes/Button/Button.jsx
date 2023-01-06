@@ -12,10 +12,13 @@ function Button(props) {
   }
 
   return (
-    <button onClick={props.onButtonTouch} style={styleBtn} className={styles.btn}>
-      {props.children || props.text}
-    </button>
-  );
+    <Button onClick={props.onButtonTouch} style={styleBtn} className={styles.btn}>
+      {props.children || props.text} </Button>)
+    ;
+    
 }
 
 export default Button;
+
+
+

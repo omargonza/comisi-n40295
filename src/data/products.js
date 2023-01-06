@@ -100,7 +100,7 @@ const products = [
       id: 12,
       title: "Remera personalizadas",
       description: "Estampados frente y dorso o a eleccion",
-      price: 4000,
+      price: 4500,
       stock: 52,
       category: "Remeras",
       img: " https://http2.mlstatic.com/D_NQ_NP_736964-MLA41953802357_052020-W.webp",

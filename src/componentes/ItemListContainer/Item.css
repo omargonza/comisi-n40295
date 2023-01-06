@@ -60,8 +60,10 @@
   
   .card-favicon.favorite{
     display: block;
-    background-color: crimson;
-    color:crimson;
+    
+    background-color: rgb(202, 183, 183);
+    color: crimson;
+    
   }
   
   small{
