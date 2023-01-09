@@ -104,15 +104,15 @@ font-family:  Helvetica, sans-serif;
     gap:1rem 2rem;
     
 }
-.buttom {
+.button {
     border: none;
     outline: 0;
     cursor:pointer;
     border-radius: 5px;
 }
 
-.buttom .button{
-    background-color:  #a0081255;
+.button .button{
+    background-color:  rgb(190, 186, 186);
     max-width: 250px;
     width: 100%;
     

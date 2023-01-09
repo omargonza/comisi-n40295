@@ -8,7 +8,7 @@ function getItems() {
     }, 500);
   });
 }
-
+*/
 export function getItemsCategory(categoryID) {
   return new Promise((resolve, reject) => {
     let itemsFound = products.filter((item) => {
@@ -21,7 +21,7 @@ export function getItemsCategory(categoryID) {
     reject("No hay productos para esta categoría.")
   });
 }
-
+/*
 export function getSingleItem(itemID) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

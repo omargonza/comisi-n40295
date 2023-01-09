@@ -1,5 +1,5 @@
 .itemcount_container{
-    border: solid thin #a0081255 ;
+    border: solid thin  crimson;
     border-radius: 15px;
     padding: 12px 25px;
     display: flex;
@@ -16,4 +16,11 @@
     justify-content: space-evenly;
     padding: 2px 10px;
     border: none;
+  }
+
+  .count{
+    background-color: crimson ;
+    color: white  ;
+    border-radius: 50%;
+    width: 38px;
   }

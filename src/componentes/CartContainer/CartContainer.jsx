@@ -1,16 +1,48 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+
+import {
+  createBuyOrder,
+  createBuyOrder_WithStockControl,
+} from "../../services/firebase";
+import Button from "../Button/Button";
+import swal from "sweetalert";
 import { cartContext } from "../../storage/cartContext";
 import { Link } from "react-router-dom";
-import Card from "../../imagenes/img05.jpg";
+import Card from "../../service/firebase/firestore";
+import CheckoutForm from "./CheckoutForm";
 //1. Traer el array del context
 //2. desgloasar o "mapear" los items
 import "boxicons";
 import "./CartContainer.css";
 
 function CartContainer() {
-  const { cart, removeItem, clear, totalPrice } = useContext(cartContext);
 
-  //render condicional ->"carrito vacio, volver al inicio"
+  const [order, setOrder] = useState(false);
+  const { cart,  } = useContext(cartContext);
+
+  
+  function handleCheckout(buyerData) {
+    const order = {
+      buyer: buyerData,
+      items: cart,
+      /* Calcular el total desde context */
+      total: 999,
+      date: new Date(),
+    };
+
+    createBuyOrder_WithStockControl(order).then((id) => {
+      setOrder(id);
+    });
+  }
+  if (order)
+  return (
+    <div>
+      <h1>Gracias!</h1>
+      <p>Se generó la orden correctamente✅</p>
+      <small>Tu id de compra: {order}</small>
+    </div>
+  );
+  
 
   return (
     <>
@@ -23,8 +55,8 @@ function CartContainer() {
         <div className="carritos show">
           <div className="carrito show">
             <div className="carrito_close">
-              <button>
-                <box-icon name="x"></box-icon>X
+              <button  >
+                <box-icon name="x"></box-icon>
               </button>
             </div>
             <h1>Tu carrito</h1>
@@ -54,8 +86,11 @@ function CartContainer() {
                       <box-icon name="trash"> </box-icon>
                     </button>
                   </div>
-                </div>
+                </div >
+                <div className="carrito_footer">
                 <h4>Precio Total ${totalPrice(cart)} </h4>
+                <CheckoutForm onCheckout={handleCheckout} />
+                </div>
               </>
             ))}
           </div>
