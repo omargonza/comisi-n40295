@@ -76,6 +76,20 @@ function ItemDetail({ product }) {
     //2. ocultar el itemCount . . .
   }
 
+  const [compra, setCompra]= useState(false)
+  const onAdd = (cantidad) => {
+   //funcion de context q agrega al carrito
+    setCompra(true)
+  };
+  return (
+    <div>
+      //codigo de itemdetail
+     {compra ? <button>Ir al carrito</button>: <ItemCount stock={10} initial={1} onAdd={onAdd} />}
+    </div>
+  );
+
+
+
   console.log(product)
   return (
     <>
