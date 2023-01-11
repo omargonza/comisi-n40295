@@ -13,7 +13,7 @@ import "./CartContainer.css";
 function CartContainer() {
 
   const [order, setOrder] = useState(false);
-  const { cart, removeItem, totalPrice } = useContext(cartContext);
+  const { cart, removeItem, totalPrice,clear } = useContext(cartContext);
 
   
   function handleCheckout(buyerData) {
@@ -57,8 +57,8 @@ function CartContainer() {
             </div>
             <h1>Tu carrito</h1>
             {cart.map((item) => (
-              <>
-                <div className="carrito_center">
+              
+                <div className="carrito_center" key={item.id}>
                   <div className="carrito_item">
                   <img height={100} src={item.img} alt={item.title} />
                     <h3> {item.title}</h3>
@@ -69,7 +69,7 @@ function CartContainer() {
                       <p className="cantidad"> {item.count}</p>
                       <button
                       onClick={() => {
-                        removeItem(item);
+                        removeItem(item.id);
                       }}
                       className="invisible-button"
                     >
@@ -79,16 +79,18 @@ function CartContainer() {
                   </div>
                       </div>
                   </div>
+                   ))}
 
                   <div className="remove_item">
                     
                 </div >
                 <div className="carrito_footer">
                 <h4>Precio Total ${totalPrice(cart)} </h4>
+                <button onClick={clear}>Vaciar carrito</button>
                 <CheckoutForm onCheckout={handleCheckout} />
                 </div>
-              </>
-            ))}
+              
+           
           </div>
         </div>
       )}
@@ -97,3 +99,4 @@ function CartContainer() {
 }
 
 export default CartContainer;
+
