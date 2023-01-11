@@ -53,18 +53,16 @@ function ItemDetail({ product }) {
 
   const { addToCart, removeItem } = useContext(cartContext);
   const removeItemBtn={
-    color:"crimson",
-    
-     with:"50px",
-
-     padding:" 8px 20px",
-     color: "black",
-     fontsize: "15px",
-     maxwidth: "160px",
-     backgroundcolor:   "rgb(190, 186, 186)",
-     borderradius:  "25%", 
+    color:"white",
+    margin: "1rem 0 0 0",
+     maxwidth:"200px",
+     padding:" 1rem 1rem",
+     outline:"0",
+     fontsize: "1.6rem",
+     fontweight:"600",
+     background: "#3033d3",
+     borderadius:  "25px", 
      border:"none",
-     margin: "5px 15px",
      cursor: "pointer"
    }
 
@@ -91,6 +89,7 @@ function ItemDetail({ product }) {
           </a>
           <div className="producto_footer">
             <h1>{product.title} </h1>
+            
             <p> {product.description} </p>
             <p className="price">${product.price} </p>
           </div>

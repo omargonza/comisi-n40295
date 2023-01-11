@@ -76,22 +76,7 @@ function NavBar() {
         Pantalones
       </NavLink>
 
-      <NavLink
-        style={({ isActive }) =>
-          isActive
-            ? {
-                color: "crimson",
-                fontSize: "1rem",
-                textDecoration: "none",
-                fontWeight: "bold",
-                fontFamily: "cursive",
-              }
-            : { color: "black", textDecoration: "none" }
-        }
-        to="/Page/Contactos"
-      >
-        Contactos
-      </NavLink>
+     
       <CartWidget />
     </nav>
   );

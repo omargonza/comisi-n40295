@@ -2,12 +2,12 @@
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Contacto from "./Page/Contactos";
+
 import NavBar from "./componentes/NavBar/NavBar";
 import { CartContextProvider } from "./storage/cartContext";
 import CartContainer from "./componentes/CartContainer/CartContainer";
 import { getItems } from "./service/firebase";
-import ThankYou from "./componentes/ThankYou/ThankYou";
+import ThankYou from "./componentes/ThanKYou/ThanKYou";
 import Inicio from "./componentes/inicio/Inicio";
 
 import "./index.css";
@@ -27,10 +27,10 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/category/:categoryID" element={<ItemListContainer />} />
           <Route path="/item/:itemID" element={<ItemDetailContainer />} />
-          <Route path="./Page/contactos" element={<Contacto />} />
+      
           
           <Route path="/cart" element={<CartContainer />} />
-          <Route path="/thankyou/:orderID" element={<ThankYou />} />
+          <Route path="/Thankyou/:orderID" element={<ThankYou />} />
           <Route path="*" element={<h1>404: Recurso no encontrado</h1>} />
         </Routes>
       </BrowserRouter>

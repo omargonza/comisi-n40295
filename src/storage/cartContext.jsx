@@ -42,11 +42,10 @@ function CartContextProvider(props){
 
     // function removeItem(id) -> filter 
 
-    const removeItem = (item) => { 
-        let updatedCart = cart.filter( it => !(it.id === item.id) )
+    const removeItem = (id) => { 
+        let updatedCart = cart.filter( it => it.id !== id)
         setCart(updatedCart);
     };
-
     // function emptyCart() -> []
 
     let clear = () => { setCart([]) };
