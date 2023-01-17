@@ -27,11 +27,11 @@ const app = initializeApp(firebaseConfig);
 const DB = getFirestore(app);
 
 export async function getSingleItem(id) {
-  //1. referencia
+  
   let docRef = doc(DB, "products", id);
-  //2. obtenemos la respuesta async de getDoc
+ 
   let docSnapshot = await getDoc(docRef);
-  //3. retornamos la respuesta.data() const referenciaDoc = doc(coleccionProd, id)   
+ 
   let item = {
     id:docSnapshot.id,
     ...docSnapshot.data()
@@ -239,9 +239,7 @@ export async function exportItemsToFirestore() {
   const colectionRef = collection(DB, "products");
 
   for (let item of products) {
-    /* addDoc(colectionRef, item).then((respuesta) =>
-      console.log("Item creado con el id->", respuesta.id)
-    ); */
+   
 
     let newItem = await addDoc(colectionRef, item);
     console.log(newItem.id);

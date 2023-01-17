@@ -1,15 +1,15 @@
 import { createContext, useState } from "react";
 
-//1. inicializamos nuestro Context
+
 const cartContext = createContext({ cart: [] });
 
-//2. Extraemos el componente Provider
+
 const Provider = cartContext.Provider;
 
 
-//4. creamos nuesro propio Provider
+
 function CartContextProvider(props){
-    //3. Creamos un estado
+ 
     const [cart, setCart] = useState([]);
   
     let saludo = "hola desde context"
@@ -40,17 +40,16 @@ function CartContextProvider(props){
         return totalItemsInCart;
     }
 
-    // function removeItem(id) -> filter 
+ 
 
     const removeItem = (id) => { 
         let updatedCart = cart.filter( it => it.id !== id)
         setCart(updatedCart);
     };
-    // function emptyCart() -> []
+   
 
     let clear = () => { setCart([]) };
 
-    // totalPriceInCart() -> $$
     let totalPrice = () => cart.reduce((ac,it) => ac + it.count*it.price,0)
     console.log (cart)
     

@@ -69,7 +69,7 @@
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     width: 90%;
     margin: 2rem auto;
-    box-shadow: 0 1px 10px #c82626;
+    box-shadow: 0 1px 10px #9a9696;
     border-radius: 5px;
 }
 .carrito_item img{
@@ -105,7 +105,7 @@
 
 .carrito_item  div box-icon:hover{
 
-   fill: #c82626; 
+   fill: gray; 
 }
 .carrito_item .cantidad{
     font-size: 2rem;

@@ -45,7 +45,7 @@ function CartContainer() {
       {!cart.length ? (
         <>
           <h2>Tu carrito esta vacio</h2>
-          <Link to="/">Volver</Link>
+          <Link to="/inicio">Volver</Link>
         </>
       ) : (
         <div className="carritos show">
@@ -60,7 +60,7 @@ function CartContainer() {
               
                 <div className="carrito_center" key={item.id}>
                   <div className="carrito_item">
-                  <img height={100} src={item.img} alt={item.title} />
+                  <img height={180} src={item.img} alt={item.title} />
                     <h3> {item.title}</h3>
 
                <div>

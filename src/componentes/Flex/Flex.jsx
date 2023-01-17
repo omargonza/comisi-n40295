@@ -7,6 +7,7 @@ function Flex(props) {
     justifyContent: "space-evenly",
     flexWrap: "wrap",
     alignItems: "center",
+    TextDecoration:"none"
      
     
   };

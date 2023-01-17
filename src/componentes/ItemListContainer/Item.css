@@ -10,6 +10,7 @@
     overflow: hidden;  
     transition: all 0.20s ease-in;
     cursor: pointer;
+    text-decoration: none;
   }
   
   .card-img{
